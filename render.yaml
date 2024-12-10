@@ -2,6 +2,8 @@ services:
   - type: web
     name: plantes-en-ligne-api
     env: node
+    region: frankfurt
+    plan: free
     buildCommand: npm install
     startCommand: node server.js
     envVars:
@@ -11,5 +13,5 @@ services:
         sync: false
       - key: STRIPE_PUBLIC_KEY
         sync: false
-      - key: FRONTEND_URL
-        sync: false
+      - key: PORT
+        value: 10000
